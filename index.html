@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Apabrita Sarkar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Mobile Navbar -->
+        <div class="mobile-navbar">
+            <div class="profile">
+                <img src="assets/profile.jpg" alt="Profile Photo">
+            </div>
+            <div class="nav-items">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="profile">
+                <img src="assets/profile.jpg" alt="Profile Picture">
+                <h2>Apabrita Sarkar</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <section id="home">
+                <div class="static-text">
+                    <h3>Hey there!</h3>
+                    <h1>I'm Apabrita Sarkar,</h1>
+                    <h2>Computer Science Engineer</h2>
+                </div>
+                <div class="typing-container">
+                    <span class="dynamic-text" id="typingText"></span>
+                    <span class="cursor"></span> <!-- Separate element for the cursor -->
+                </div>
+                <br>
+                <button class="btn">
+                    <span>Hire me</span>
+                    <div class="icon-container">
+                        <img src="assets/hireme.png" alt="Download Icon">
+                    </div>
+                </button>
+                <button class="btn">
+                    <span>Download CV</span>
+                    <div class="icon-container">
+                        <img src="assets/downloads.png" alt="Download Icon">
+                    </div>
+                </button>
+
+            </section>
+
+            <section id="about">
+                <div class="heading-container">
+                    <h2 class="big-heading">ABOUT ME</h2>
+                    <h3 class="small-heading">Know Me More</h3>
+                </div>
+                <h2>I'm Apabrita Sarkar, a Web Developer</h2>
+                <br>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+                <br>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+
+            </section>
+
+            <section id="projects">
+                <div class="heading-container">
+                    <h2 class="big-heading">PROJECTS</h2>
+                    <h3 class="small-heading">I've Worked On</h3>
+                </div>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/Keeper.jpg" alt="Project 1">
+                                <h2>Keeper</h2>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>This is a note based website , where you can write any notes , add them , delete them as per your choice.</p>
+                                <a href="https://github.com/ApabritaSarkar/Keeper" target="_blank">
+                                    <button class="btn">
+                                        <span>View site</span>
+                                        <div class="icon-container">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/724/724927.png"
+                                                alt="Download Icon">
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/ToDo.jpg" alt="Project 1">
+                                <h2>To-do list</h2>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Here you can create a list of your pending works, then after completing the work you can delete that work from list.</p>
+                                <a href="https://github.com/ApabritaSarkar/Todolist" target="_blank">
+                                    <button class="btn">
+                                        <span>View site</span>
+                                        <div class="icon-container">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/724/724927.png"
+                                                alt="Download Icon">
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/TicTacToe.jpg" alt="Project 1">
+                                <h2>Tic-tac-toe</h2>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>A tic-tac-toe gaming website with all the functionalities needed.</p>
+                                <a href="https://github.com/ApabritaSarkar/Tic-tac-toe" target="_blank">
+                                    <button class="btn">
+                                        <span>View site</span>
+                                        <div class="icon-container">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/724/724927.png"
+                                                alt="Download Icon">
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resume">
+                <div class="heading-container">
+                    <h2 class="big-heading">RESUME</h2>
+                    <h3 class="small-heading">Summary</h3>
+                </div>
+                <div class="resume-section">
+
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-name">Apabrita Sarkar</span>
+                            <hr class="green-line">
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">apabrita0403@gmail.com</span>
+                            <hr class="green-line">
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">From:</span>
+                            <span class="info-value">Kolkata, West Bengal</span>
+                            <hr class="green-line">
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Education:<br></span>
+                            <span class="info-value">
+                                Computer Science and Engineering<br>
+                                (Bachelor in Technology)<br>
+                                2022-2026<br>
+                                University of Engineering and Management, Kolkata
+                            </span>
+                        </div>
+                        <button class="btn">
+                            <span>Download CV</span>
+                            <div class="icon-container">
+                                <img src="assets/downloads.png" alt="Download Icon">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="skills-section">
+                        <h3 class="skills-title">Skills</h3>
+                        <div class="skill-item">
+                            <p>HTML/CSS <span class="percentage">95%</span></p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>JavaScript <span class="percentage">77%</span></p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 77%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>React <span class="percentage">70%</span></p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>Bootstrap <span class="percentage">90%</span></p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>Figma <span class="percentage">50%</span></p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>ExpressJs <span class="percentage">55%</span></p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>MySQL <span class="percentage">75%</span></p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="heading-container">
+                    <h2 class="big-heading">CONTACT</h2>
+                    <h3 class="small-heading">Get In Touch</h3>
+                </div>
+                <div class="contact-section">
+                    <div class="contact-details">
+                        <strong>ADDRESS</strong><br><br>
+                        Shreya Abasan, 4th floor<br>
+                        Indira Block 3, Nilgunj Rd.<br>
+                        Sodepur, North 24 Parganas, 700110, West Bengal<br><br>
+                        <a href="tel:+918609862911" class="dark-a">+91 8609862911</a><br>
+                        <a href="mailto:apabrita0403@gmail.com" class="dark-a">apabrita0403@gmail.com</a><br><br><br><br>
+                        <strong>FOLLOW ME</strong><br><br>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/your-profile" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <textarea placeholder="Write your message here..."></textarea>
+                        <button class="btn">
+                            <span>Send message</span>
+                            <div class="icon-container">
+                                <img src="assets/send.png" alt="Download Icon">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <p>copyright &copy; 2024 Apabrita. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

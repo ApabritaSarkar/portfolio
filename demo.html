@@ -1,0 +1,91 @@
+<!-- future updated sidebar -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Sidebar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 20%; /* Sidebar occupies 20% of the screen */
+      height: 100%;
+      background-color: #1a1a40;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 10px;
+    }
+
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 50px; /* Initial small width for the item */
+      height: 60px;
+      background-color: #29b36b;
+      margin-bottom: 10px;
+      transition: width 0.3s ease, background-color 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .nav-item:hover {
+      width: 100%; /* Expand div to full sidebar width on hover */
+      background-color: #29b36b; /* Change background on hover */
+    }
+
+    .nav-text {
+      margin-left: 20px;
+      color: white;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-item:hover .nav-text {
+      opacity: 1; /* Show text on hover */
+    }
+
+    .nav-item i {
+      font-size: 24px;
+      right: 13px;
+      position: absolute;
+      color: white;
+    
+      transition: color 0.3s ease;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="nav-item">
+      <span class="nav-text">Home</span><i class="fas fa-home"></i>
+    </div>
+    <div class="nav-item">
+      <span class="nav-text">About</span><i class="fas fa-user"></i>
+    </div>
+    <div class="nav-item">
+      <span class="nav-text">Projects</span><i class="fas fa-briefcase"></i>
+    </div>
+    <div class="nav-item">
+      <span class="nav-text">Contact</span><i class="fas fa-envelope"></i>
+    </div>
+  </div>
+
+</body>
+</html>

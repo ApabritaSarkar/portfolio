@@ -1,0 +1,487 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white
+}
+
+.dark-a {
+    color: #001524;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #001524;
+    padding: 20px;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for any transformation */
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 120px;
+}
+
+.profile h2 {
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 70px;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 25px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-content {
+    margin-left: 20%;
+    width: 80%;
+    background-color: #FFECD1;
+    overflow-y: auto;
+}
+
+/* Section styling */
+section {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.main-content section:last-child {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#home {
+    color: #78290F;
+    text-align: left;
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#home h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.typing-container {
+    display: inline-block;
+}
+
+.dynamic-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #78290F;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 2rem;
+    background-color: #78290F;
+    margin-left: 2px;
+    vertical-align: bottom;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    margin: 20px 20px 0 0;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #669bbc;
+    background-color: #669bbc;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.6s ease;
+}
+
+.btn span {
+    z-index: 1;
+}
+
+.icon-container {
+    background-color: #001524;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.icon-container img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
+/* Hover Effect */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #001524;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn:hover {
+    color: white;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+.heading-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.big-heading {
+    font-size: 6em;
+    color: #FFBF69;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    z-index: 1;
+}
+
+.small-heading {
+    color: #78290F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card and Flip Effect */
+.project-card {
+    perspective: 1000px;
+    height: 200px;
+    width: 300px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Common Front and Back Styles */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Front side of the card (image and title) */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.flip-card-front h2 {
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Back side of the card (details and button) */
+.flip-card-back {
+    background-color: #001524;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.resume-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.personal-info,
+.skills-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-item {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.info-label {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.green-line {
+    border: none;
+    border-top: 2px solid #669bbc;
+    margin: 10px 0;
+    width: 45%;
+}
+
+.info-name {
+    color: #669bbc;
+}
+
+.skills p {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.percentage {
+    position: absolute;
+    right: 45px;
+}
+
+.skills-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 31px;
+}
+
+.skill-item {
+    margin-bottom: 17px;
+}
+
+.skill-name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.skill-bar {
+    background-color: #001524;
+    border-radius: 20px;
+    height: 20px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.skill-progress {
+    background-color: #669bbc;
+    border-radius: 20px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-details,
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+strong {
+    font-size: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+}
+
+.social-icons i {
+    font-size: 30px;
+}
+
+.social-icons a:hover {
+    color: #0077b5;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.contact-form textarea {
+    height: 170px;
+}
+
+.footer {
+    background-color: #001524;
+    color: white;
+    text-align: center;
+    height: 25px;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+/* Mobile Navbar Styling */
+.mobile-navbar {
+    display: none; /* Hidden by default, shown on mobile */
+    background-color: #001524;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-navbar .profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.mobile-navbar nav {
+    display: flex;
+}
+
+.mobile-navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.mobile-navbar nav ul li {
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-navbar nav ul li a {
+    color: white; /* Ensure text color is white */
+    
+    font-size: 16px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .mobile-navbar {
+        display: flex; /* Show mobile navbar on mobile screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-navbar {
+        display: none; /* Hide mobile navbar on larger screens */
+    }
+}
