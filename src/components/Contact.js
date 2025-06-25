@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="relative px-4 py-10 max-w-3xl mx-auto text-center overflow-hidden"
+      className="relative px-20 py-20 max-w-3xl mx-auto text-center overflow-hidden"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
