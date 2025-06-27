@@ -41,19 +41,19 @@ const Education = () => {
   return (
     <motion.section
       id="education"
-      className="px-4 py-10 max-w-5xl mx-auto"
+      className="px-4 py-8 max-w-6xl mx-auto text-center"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-4xl font-bold mb-14 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
+      <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 border-b-4 border-purple-200 inline-block pb-1">
         Education
       </h2>
 
       <div className="relative border-l-4 border-purple-200 pl-6 space-y-12">
         {educationData.map((edu, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="text-left relative">
             {/* Icon Marker */}
             <span
               className={`absolute -left-7 top-1 w-6 h-6 rounded-full flex items-center justify-center text-white text-sm shadow-md ${

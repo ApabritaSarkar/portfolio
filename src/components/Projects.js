@@ -9,7 +9,7 @@ const projects = [
       "AI-powered solution to detect crowd density, identify missing persons, and send alerts to a centralized police dashboard.",
     tech: ["MERN", "Python", "Flask", "Axios", "GitHub"],
     live: "",
-    github: "",
+    github: "https://github.com/ApabritaSarkar/crowdManagement",
   },
   {
     title: "GreenVerse – Eco lifestyle Platform",
@@ -33,13 +33,13 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="bg-gradient-to-b from-white via-slate-50 to-slate-100 px-4 py-8"
+      className="px-4 py-8 max-w-6xl mx-auto text-center"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
+      <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 border-b-4 border-purple-200 inline-block pb-1">
         Projects
       </h2>
 
@@ -47,7 +47,7 @@ const Projects = () => {
         {projects.map((project, i) => (
           <motion.div
             key={i}
-            className="bg-white/80 backdrop-blur-md border border-purple-100 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition duration-300"
+            className="bg-white/80 backdrop-blur-md border border-purple-100 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition duration-300 text-left relative"
             whileHover={{ scale: 1.02 }}
           >
             <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
